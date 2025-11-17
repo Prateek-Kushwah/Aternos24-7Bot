@@ -1,6 +1,7 @@
 const mineflayer = require("mineflayer");
 const { pathfinder, Movements, goals } = require("mineflayer-pathfinder");
 const express = require("express");
+require("dotenv").config({ path: ".env.local" });
 
 const app = express();
 const port = 3000;
@@ -11,12 +12,13 @@ app.listen(port, () => console.log(`Web server started on port ${port}`));
 
 // Function to start the bot
 function startBot() {
-    const bot = mineflayer.createBot({
-        host: "WebPlayz_.aternos.me",
-        port: 63504,
-        username: "CircularBot",
-        version: false, // Auto-detect Minecraft version
-    });
+const bot = mineflayer.createBot({
+    host: process.env.ServerIp,
+    port: Number(process.env.ServerPort) || 25565,
+    username: process.env.BotName || "AternosBot",
+    version: false,
+});
+
 
     bot.loadPlugin(pathfinder);
 

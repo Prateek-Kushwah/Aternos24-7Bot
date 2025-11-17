@@ -6,10 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Prateek Kushwah",
   "license": "ISC",
-  "description": "",
+  "description": "This is a Minecraft bot that can connect to a server and perform various actions using the mineflayer library. It can be customized to suit different needs and can be extended with additional features. The bot can be used for various purposes, such as automating tasks, testing server functionality, or simply providing entertainment.",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "mineflayer": "^4.27.0",
     "mineflayer-pathfinder": "^2.4.5"
   }

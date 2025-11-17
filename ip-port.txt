@@ -1,2 +1,0 @@
-  // host: 'WebPlayz_.aternos.me',    // Replace with your server IP
-  // port: 63504,
